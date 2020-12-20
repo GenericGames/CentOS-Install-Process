@@ -1,17 +1,21 @@
 # SSH Setup
 
-## Lock Root
+## Info
+
+[Back to README](README.md)
+
+### Lock Root
 
 ```sh
 sudo passwd --lock root
 ```
 
-## Set up SSH, shortcut, key, disable password login
+### Set up SSH, shortcut, key, disable password login
 
 Update the system
 
 ```sh
-sudo dnf update
+sudo dnf update -y
 ```
 
 Install openssh-server
@@ -56,7 +60,7 @@ Create shortcut for ssh login on local machine
 cd ~/.ssh
 nano config
 
-#add below to file
+## add below to file
 
 Host "hostname"
     User "username"
@@ -73,7 +77,7 @@ ssh "hostname"
 Set up login with key
 
 ```sh
-ssh-copy-id "hostname" #do this on local pc
+ssh-copy-id "hostname" ## do this on local pc
 ```
 
 Test if ssh-copy-id worked
@@ -87,11 +91,11 @@ disable login with password
 ```sh
 sudo nano /etc/ssh/sshd_config
 
-#change from
+## change from
 
 "#PasswordAuthentication yes"
 
-# to - Make sure to remove the # at the start
+## to - Make sure to remove the # at the start
 
 "PasswordAuthentication no"
 ```
