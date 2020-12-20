@@ -4,7 +4,7 @@ Walk through for setting up ssh, Pterodactyl panel, Pterodactyl Webserver config
 
 * [Setup SSH](1%20-%20SSH%20Setup.md)
   * [Pterodactyl](Pterodactyl/)
-      * [Panel](Pterodactyl/1 - Panel/)
+      * [Panel](Pterodactyl/1 - Panel/Readme.md)
         * [Panel Dependencies]
         * [Panel Install]
         * [Webserver Configuration]
