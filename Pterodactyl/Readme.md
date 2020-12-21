@@ -1,6 +1,6 @@
 # Table of Contents for Pterodactyl
 
-  [Back](https://github.com/GenericGames/CentOS-Install-Process)
+  [Back to Main](https://github.com/GenericGames/CentOS-Install-Process)
 
 * [Panel](Pterodactyl/1%20-%20Panel)
     * [Dependencies](Pterodactyl/1%20-%20Panel/1%20-%20Dependencies.md)
