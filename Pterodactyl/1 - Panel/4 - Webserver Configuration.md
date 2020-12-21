@@ -2,7 +2,7 @@
 
 ## Info
 
-[Back to Panel](Pterodactyl/1%20-%20Panel)
+[Back to Panel](/Pterodactyl/1%20-%20Panel)
 
 ### Setup PHP
 

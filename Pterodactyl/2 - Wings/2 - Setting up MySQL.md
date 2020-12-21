@@ -2,7 +2,7 @@
 
 ## Info
 
-[Back to Wings](Pterodactyl/2%20-%20Wings)
+[Back to Wings](/Pterodactyl/2%20-%20Wings)
 
 ### Configuring MariaDB
 
@@ -98,4 +98,4 @@ systemctl restart mysql
 
 ## Info
 
-[Next Step](Pterodactyl/2%20-%20Wings/3%20-%20Install.md)
+[Next Step](/Pterodactyl/2%20-%20Wings/3%20-%20Install.md)

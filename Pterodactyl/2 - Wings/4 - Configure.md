@@ -2,7 +2,7 @@
 
 ## Info
 
-[Back to Wings](Pterodactyl/2%20-%20Wings)
+[Back to Wings](/Pterodactyl/2%20-%20Wings)
 
 ###
 

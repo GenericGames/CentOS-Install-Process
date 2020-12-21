@@ -2,7 +2,7 @@
 
 ## Info
 
-[Back to Panel](Pterodactyl/1%20-%20Panel)
+[Back to Panel](/Pterodactyl/1%20-%20Panel)
 
 ### Download Files
 
@@ -261,4 +261,4 @@ sudo systemctl enable --now pteroq.service
 
 ## Info
 
-[Next Step - Webserver Configuration](Pterodactyl/1%20-%20Panel/4%20-%20Webserver%20Configuration.md)
+[Next Step - Webserver Configuration](/Pterodactyl/1%20-%20Panel/4%20-%20Webserver%20Configuration.md)
