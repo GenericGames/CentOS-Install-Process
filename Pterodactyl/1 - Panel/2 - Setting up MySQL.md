@@ -1,4 +1,4 @@
-# Pterodactyl Setting up MySQL
+# Setting up MySQL
 
 ## Info
 
@@ -27,7 +27,7 @@ Remove test database and access to it? [Y/N] Y
 Reload privilege tables now? [Y/N] Y
 ```
 
-### Creating a database for Pterodactyl
+### Creating a database for Pterodactyl Panel
 
 Log In
 
@@ -66,71 +66,4 @@ Leave MariaDB/MySQL
 
 ```sh
 exit
-```
-
-### Creating a Database Host for Nodes
-
-#### Dependencies
-
-The dependencies only need to be installed if this system is not running the panel, otherwise they are already installed
-
-```sh
-sudo apt update
-```
-
-```sh
-sudo apt install mariadb-server -y
-```
-
-#### Creating a user
-
-```sh
-mysql -u root -p
-```
-
-```sql
-USE mysql;
-```
-
-Change IP below to server's IP that is running the panel & change username/password to unique user/pass
-
-```sql
-CREATE USER 'pterodactyluser'@'127.0.0.1' IDENTIFIED BY 'somepassword';
-```
-
-Assigning permissions
-
-Change username and IP blow to whatever you used above
-
-```sql
-GRANT ALL PRIVILEGES ON *.* TO 'pterodactyluser'@'127.0.0.1' WITH GRANT OPTION;
-```
-
-```sql
-FLUSH PRIVILEGES;
-```
-
-```sql
-exit
-```
-
-Allowing external database access
-
-```sh
-cd /etc/mysql/
-```
-
-```sh
-nano my.cnf
-```
-
-add below to file
-
-```sh
-[mysqld]
-bind-address=0.0.0.0
-```
-
-```sh
-systemctl restart mysql
 ```
