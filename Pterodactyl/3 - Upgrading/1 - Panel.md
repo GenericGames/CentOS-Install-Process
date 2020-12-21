@@ -7,6 +7,7 @@
 ### Maintenance Mode
 
 ```sh
+cd /var/www/pterodactyl
 php artisan down
 ```
 
@@ -14,6 +15,7 @@ php artisan down
 
 ```sh
 cd /var/www/pterodactyl
+curl -L https://github.com/pterodactyl/panel/releases/download/v1.1.3/panel.tar.gz | tar -xzv
 chmod -R 755 storage/* bootstrap/cache
 ```
 
@@ -28,7 +30,7 @@ export PATH="$PATH:/usr/local/bin"
 ## If that doesn't work than do not in root
 which composer
 ## Replace the path below with what the command above says
-"/usr/local/bin/composer" install --no-dev --optimize-autoloader
+/usr/local/bin/composer install --no-dev --optimize-autoloader
 ```
 
 ### Clear Compiled Template Cache
@@ -61,6 +63,7 @@ php artisan queue:restart
 Only leave maintenance mode if you are fully done upgrading and do not need to upgrade wings
 
 ```sh
+cd /var/www/pterodactyl
 php artisan up
 ```
 

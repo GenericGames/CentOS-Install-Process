@@ -9,6 +9,7 @@
 Make sure the system running the panel is in maintenance mode
 
 ```sh
+cd /var/www/pterodactyl
 php artisan down
 ```
 
@@ -31,6 +32,7 @@ systemctl restart wings
 Leave Maintenance Mode & Restart Queue Workers on the system running the panel
 
 ```sh
+cd /var/www/pterodactyl
 php artisan up
 php artisan queue:restart
 ```
