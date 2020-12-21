@@ -1,6 +1,6 @@
 # Table of Contents for Pterodactyl
 
-  [Back](../Readme.md)
+  [Back](https://github.com/GenericGames/CentOS-Install-Process)
 
 * [Panel](Pterodactyl/1%20-%20Panel)
     * [Dependencies](Pterodactyl/1%20-%20Panel/1%20-%20Dependencies.md)
@@ -13,5 +13,5 @@
     * [Configure](Pterodactyl/2%20-%20Wings/4%20-%20Configure.md)
     * [Setting up MySQL](https://github.com/GenericGames/CentOS-Install-Process/blob/main/Pterodactyl/2%20-%20Wings/2%20-%20Setting%20up%20MySQL.md)
 * [Upgrading](Pterodactyl/3%20-%20Upgrading)
-    * [Panel](Pterodactyl/3%20-%20Upgrading/Panel.md)
-    * [Wings](Pterodactyl/3%20-%20Upgrading/Wings.md)
+    * [Panel](Pterodactyl/3%20-%20Upgrading/1%20-%20Panel.md)
+    * [Wings](Pterodactyl/3%20-%20Upgrading/2%20-%20Wings.md)
