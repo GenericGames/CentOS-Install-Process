@@ -21,4 +21,4 @@
 
 ## Info
 
-[Next Step](/Pterodactyl/2%20-%20Wings/4%20-%20Configure.md)
+[Next Step - Configure](/Pterodactyl/2%20-%20Wings/4%20-%20Configure.md)

@@ -87,4 +87,4 @@ setsebool -P httpd_unified 1
 ```
 ## Info
 
-[Next step](/Pterodactyl/1%20-%20Panel/2%20-%20Setting%20up%20MySQL.md)
+[Next Step - Setting up MySQL](/Pterodactyl/1%20-%20Panel/2%20-%20Setting%20up%20MySQL.md)

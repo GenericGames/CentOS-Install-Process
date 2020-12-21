@@ -98,4 +98,4 @@ systemctl restart mysql
 
 ## Info
 
-[Next Step](/Pterodactyl/2%20-%20Wings/3%20-%20Install.md)
+[Next Step - Install](/Pterodactyl/2%20-%20Wings/3%20-%20Install.md)

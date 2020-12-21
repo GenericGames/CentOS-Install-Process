@@ -69,4 +69,4 @@ exit
 ```
 ## Info
 
-[Next Step](/Pterodactyl/1%20-%20Panel/3%20-%20Install.md)
+[Next Step - Install](/Pterodactyl/1%20-%20Panel/3%20-%20Install.md)
