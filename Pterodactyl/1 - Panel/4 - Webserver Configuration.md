@@ -184,4 +184,4 @@ systemctl restart nginx
 
 ## Info
 
-[Back to Pterodactyl](/Petrodactyl)
+[Back to Pterodactyl](/Pterodactyl)
