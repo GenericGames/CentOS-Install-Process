@@ -78,7 +78,7 @@ exit
 Allowing external database access
 
 ```sh
-cd /etc/mysql/
+cd /etc/
 ```
 
 ```sh
@@ -96,6 +96,10 @@ bind-address=0.0.0.0
 systemctl restart mysql
 ```
 
+### Adding database to panel
+
+On the Admin Control select **Databases** and select **Create New** fill in the info used to create the database & user
+
 ## Info
 
-[Next Step - Install](/Pterodactyl/2%20-%20Wings/3%20-%20Install.md)
+[Back to Pterodactyl](/Pterodactyl)
