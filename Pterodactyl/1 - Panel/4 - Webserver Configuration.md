@@ -2,7 +2,7 @@
 
 ## Info
 
-[Back to README](README.md)
+[Back to Panel](Pterodactyl/1%20-%20Panel)
 
 ### Setup PHP
 
@@ -181,3 +181,7 @@ server {
 ```sh
 systemctl restart nginx
 ```
+
+## Info
+
+[Back to Pterodactyl](/Petrodactyl)

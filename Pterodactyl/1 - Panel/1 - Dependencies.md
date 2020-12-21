@@ -1,8 +1,8 @@
 # Pterodactyl Panel Dependencies
 
-[Back to README](README.md)
-
 ## Info
+
+[Back to Panel](Pterodactyl/1%20-%20Panel)
 
 This is only done on one machine.
 If the panel is already installed move onto [Pterodactyl Wings install](3%20-%20Pterodactyl%20Wings%20install.md).
@@ -85,3 +85,6 @@ setsebool -P httpd_can_network_connect 1
 setsebool -P httpd_execmem 1
 setsebool -P httpd_unified 1
 ```
+## Info
+
+[Next step](Pterodactyl/1%20-%20Panel/2%20-%20Setting%20up%20MySQL.md)

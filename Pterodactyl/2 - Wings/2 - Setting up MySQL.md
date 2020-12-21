@@ -2,7 +2,7 @@
 
 ## Info
 
-[Back to README](README.md)
+[Back to Wings](Pterodactyl/2%20-%20Wings)
 
 ### Configuring MariaDB
 
@@ -95,3 +95,7 @@ bind-address=0.0.0.0
 ```sh
 systemctl restart mysql
 ```
+
+## Info
+
+[Next Step](Pterodactyl/2%20-%20Wings/3%20-%20Install.md)
