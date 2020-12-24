@@ -31,18 +31,6 @@ Reload privilege tables now? [Y/N] Y
 
 ### Creating a database for Pterodactyl Nodes
 
-#### Dependencies
-
-The dependencies only need to be installed if this system is not running the panel, otherwise they are already installed
-
-```sh
-sudo apt update
-```
-
-```sh
-sudo apt install mariadb-server -y
-```
-
 #### Creating a user
 
 ```sh
