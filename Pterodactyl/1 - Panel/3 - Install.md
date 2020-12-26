@@ -220,6 +220,10 @@ chown -R nginx:nginx *
 Crontab Configuration
 
 ```sh
+## Set default cron editor
+nano ~/.bashrc
+export EDITOR=nano
+## Add above line to the bottom of the file and save/exit
 sudo crontab -e
 ```
 
