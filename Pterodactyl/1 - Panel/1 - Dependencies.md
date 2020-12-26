@@ -28,9 +28,8 @@ MariaDB
 ```sh
 dnf install -y mariadb mariadb-server
 
-## Start maraidb
-systemctl start mariadb
-systemctl enable mariadb
+## Enable & start maraidb
+systemctl enable --now mariadb
 ```
 
 PHP 7.4
