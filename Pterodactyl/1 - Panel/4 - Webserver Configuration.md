@@ -6,12 +6,6 @@
 
 ### Setup PHP
 
-Switch to root if you aren't already in it
-
-```
-sudo -s
-```
-
 ```sh
 cd /etc/php-fpm.d
 nano www-pterodactyl.conf
@@ -36,11 +30,10 @@ pm.process_idle_timeout = 10s
 pm.max_requests = 200
 ```
 
-Start and enable php-fpm
+Enable & start php-fpm
 
 ```sh
-systemctl enable php-fpm
-systemctl start php-fpm
+systemctl enable --now php-fpm
 ```
 
 ### NGINX Configuration

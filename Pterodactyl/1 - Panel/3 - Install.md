@@ -224,12 +224,11 @@ Crontab Configuration
 nano ~/.bashrc
 export EDITOR=nano
 ## Add above line to the bottom of the file and save/exit
+## You might have to use `exit` and enter sudo again for it to take effect
 sudo crontab -e
 ```
 
 ```sh
-## Note: The above command opens in vim.
-## To save and exit press esc and type ":ZZ" and to just exit use "ZQ" than press enter
 * * * * * php /var/www/pterodactyl/artisan schedule:run >> /dev/null 2>&1
 ```
 
