@@ -52,6 +52,13 @@ Composer
 ```sh
 dnf install php-cli php-json php-zip wget unzip
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+## Do below command not in root
+which composer
+## Replace the path below with what the command above says
+sudo nano /root/.bashrc
+## Add to bottom replace the path with the path the which composer gave
+export PATH="$PATH:/usr/local/bin"
 ```
 
 Nginx
