@@ -70,8 +70,7 @@ firewall-cmd --add-service=http --permanent
 firewall-cmd --add-service=https --permanent
 firewall-cmd --reload
 
-systemctl start nginx
-systemctl enable nginx
+systemctl enable --now nginx
 ```
 
 Redis
@@ -79,8 +78,7 @@ Redis
 ```sh
 dnf install -y redis
 
-systemctl start redis
-systemctl enable redis
+systemctl enable --now redis
 ```
 
 SELinux commands
