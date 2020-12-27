@@ -9,6 +9,19 @@ If the panel is already installed move onto [Pterodactyl Wings install](3%20-%20
 
 [Link to documentation](https://pterodactyl.io/community/installation-guides/panel/centos8.html#installing-the-panel)
 
+### Before Entering Root
+
+```sh
+sudo nano /root/.bashrc
+```
+
+Add the lines below to the bottom of the file
+
+```conf
+export PATH="$PATH:/usr/local/bin"
+export EDITOR=nano
+```
+
 ### Install Dependencies
 
 Switch to root. You will need to be in root for multiple of the below commands
@@ -52,13 +65,6 @@ Composer
 ```sh
 dnf install php-cli php-json php-zip wget unzip
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
-## Do below command not in root
-which composer
-## Replace the path below with what the command above says
-sudo nano /root/.bashrc
-## Add to bottom replace the path with the path the which composer gave
-export PATH="$PATH:/usr/local/bin"
 ```
 
 Nginx

@@ -28,17 +28,6 @@ Copy default default environment setting file, install core dependencies, and ge
 ```sh
 cp .env.example .env
 composer install --no-dev --optimize-autoloader
-## The above command will tell you to not run it in root, ignore it.
-## It will not work in this case if it's not ran in root.
-
-## If the above command doesn't work try
-sudo nano /root/.bashrc
-## And add to the bottom
-export PATH="$PATH:/usr/local/bin"
-## If that doesn't work than do not in root
-which composer
-## Replace the path below with what the command above says
-"/usr/local/bin/composer" install --no-dev --optimize-autoloader
 ```
 
 Only run the command below if you are installing this Panel for the first time and do not have any Pterodactyl Panel data in the database
@@ -220,11 +209,6 @@ chown -R nginx:nginx *
 Crontab Configuration
 
 ```sh
-## Set default cron editor
-nano ~/.bashrc
-export EDITOR=nano
-## Add above line to the bottom of the file and save/exit
-## You might have to use `exit` and enter sudo again for it to take effect
 sudo crontab -e
 ```
 
