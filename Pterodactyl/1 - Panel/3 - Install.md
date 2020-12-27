@@ -248,8 +248,8 @@ After=redis.service
 [Service]
 # On some systems the user and group might be different.
 # Some systems use `apache` or `nginx` as the user and group.
-User=www-data
-Group=www-data
+User=nginx
+Group=nginx
 Restart=always
 ExecStart=/usr/bin/php /var/www/pterodactyl/artisan queue:work --queue=high,standard,low --sleep=3 --tries=3
 
