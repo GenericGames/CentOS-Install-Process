@@ -54,8 +54,7 @@ WantedBy=multi-user.target
 ### Start & Enable wings
 
 ```sh
-systemctl start wings
-systemctl enable wings
+systemctl enable --now wings
 ```
 
 ## Info

@@ -53,13 +53,7 @@ Change username and IP blow to whatever you used above
 
 ```sql
 GRANT ALL PRIVILEGES ON *.* TO 'pterodactyluser'@'127.0.0.1' WITH GRANT OPTION;
-```
-
-```sql
 FLUSH PRIVILEGES;
-```
-
-```sql
 exit
 ```
 

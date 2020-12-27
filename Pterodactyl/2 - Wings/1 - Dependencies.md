@@ -4,6 +4,19 @@
 
 [Back to Wings](/Pterodactyl/2%20-%20Wings)
 
+### Before install
+
+```sh
+sudo nano /root/.bashrc
+```
+
+Add the lines below to the bottom of the file
+
+```conf
+export PATH="$PATH:/usr/local/bin"
+export EDITOR=nano
+```
+
 ### Docker
 
 ```sh
