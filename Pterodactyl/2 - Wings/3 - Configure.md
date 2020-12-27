@@ -60,4 +60,4 @@ systemctl enable wings
 
 ## Info
 
-[Next Step - Setting up MySQL](/Pterodactyl/2%20-%20Wings/2%20-%20Setting%20up%20MySQL.md)
+[Next Step - Setting up MySQL](/Pterodactyl/2%20-%20Wings/4%20-%20Setting%20up%20MySQL.md)
