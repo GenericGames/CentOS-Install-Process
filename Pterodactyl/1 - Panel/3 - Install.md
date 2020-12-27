@@ -11,7 +11,7 @@
 <p>
 
 ```sh
-mkdir -p /var/www/pterodactyl && cd /var/www/pterodactyl && curl -Lo panel.tar.gz https://github.com/pterodactyl/panel/releases/download/v1.1.1/panel.tar.gz && tar -xzvf panel.tar.gz && chmod -R 755 storage/* bootstrap/cache/ && cp .env.example .env && composer install --no-dev --optimize-autoloader && php artisan key:generate --force
+mkdir -p /var/www/pterodactyl && cd /var/www/pterodactyl && curl -Lo panel.tar.gz https://github.com/pterodactyl/panel/releases/download/v1.1.1/panel.tar.gz && tar -xzvf panel.tar.gz && chmod -R 755 storage/* bootstrap/cache/ && cp .env.example .env && composer install --no-dev --optimize-autoloader && php artisan key:generate --force && echo 'done'
 ```
 
 </p>
