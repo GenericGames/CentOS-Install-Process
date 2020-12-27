@@ -35,6 +35,21 @@ Log In
 mysql -u root -p
 ```
 
+Quick setup
+
+<details>
+<summary>Quick mysql setup</summary>
+<p>
+Note: This command is just for testing and should not be used for the actual install
+
+```sh
+USE mysql; && CREATE USER pterodactyl@127.0.0.1 IDENTIFIED BY 'somePassword'; && CREATE DATABASE panel; && GRANT ALL PRIVILEGES ON panel.* TO 'pterodactyl'@'127.0.0.1' WITH GRANT OPTION; && FLUSH PRIVILEGES; && exit
+```
+
+</p>
+</details>
+&nbsp;
+
 Set to use mysql
 
 ```sql
