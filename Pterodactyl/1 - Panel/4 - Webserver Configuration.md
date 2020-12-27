@@ -40,9 +40,6 @@ systemctl enable --now php-fpm
 
 ```sh
 cd /etc/nginx/conf.d/
-```
-
-```sh
 nano pterodactyl.conf
 ```
 
@@ -169,10 +166,47 @@ server {
 }
 ```
 
+#### Fix nginx config
+
+```sh
+cd /etc/nginx/
+nano nginx.conf
+```
+
+comment out the below section of the config
+
+```conf
+    server {
+        listen       80 default_server;
+        listen       [::]:80 default_server;
+        server_name  _;
+        root         /usr/share/nginx/html;
+
+        # Load configuration files for the default server block.
+        include /etc/nginx/default.d/*.conf;
+
+        location / {
+        }
+
+        error_page 404 /404.html;
+            location = /40x.html {
+        }
+
+        error_page 500 502 503 504 /50x.html;
+            location = /50x.html {
+        }
+    }
+```
+
 #### Restart NGINX
 
 ```sh
 systemctl restart nginx
+```
+
+#### 502 Bad Gateway
+```sh
+reboot
 ```
 
 ## Info
