@@ -15,8 +15,7 @@ sudo dnf install -y https://download.docker.com/linux/centos/7/x86_64/stable/Pac
 
 dnf install -y docker-ce --nobest
 
-systemctl enable docker
-systemctl start docker
+systemctl enable --now docker
 ```
 
 ### MariaDB
@@ -26,9 +25,7 @@ You only need to install MariaDB if the panel is not on the same machine
 ```sh
 dnf install -y mariadb mariadb-server
 
-## Start maraidb
-systemctl start mariadb
-systemctl enable mariadb
+systemctl enable --now mariadb
 ```
 
 ### FirewallD changes
