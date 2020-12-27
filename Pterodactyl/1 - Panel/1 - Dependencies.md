@@ -12,6 +12,14 @@ If the panel is already installed move onto [Pterodactyl Wings install](3%20-%20
 ### Before Entering Root
 
 ```sh
+# Run this whole command as one
+sudo tee /etc/profile.d/nano.sh <<EOF
+export VISUAL="nano"
+export EDITOR="nano"
+EOF
+```
+
+```sh
 sudo nano /root/.bashrc
 ```
 
