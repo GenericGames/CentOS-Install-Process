@@ -20,8 +20,6 @@ Select the node you just created and click on **Configuration** and copy the tex
 
 ```sh
 wings --debug
-## If the above command says that wings is not installed run the below command
-/usr/local/bin/wings --debug
 ```
 
 ### Daemonizing

@@ -61,9 +61,6 @@ Allowing external database access
 
 ```sh
 cd /etc/
-```
-
-```sh
 nano my.cnf
 ```
 
