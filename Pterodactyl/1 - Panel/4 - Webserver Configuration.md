@@ -8,7 +8,7 @@
 
 ```sh
 cd /etc/php-fpm.d
-nano www-pterodactyl.conf
+sudo nano www-pterodactyl.conf
 ```
 
 Paste the info below into that file
@@ -33,19 +33,23 @@ pm.max_requests = 200
 Enable & start php-fpm
 
 ```sh
-systemctl enable --now php-fpm
+sudo systemctl enable --now php-fpm
 ```
 
 ### NGINX Configuration
 
 ```sh
 cd /etc/nginx/conf.d/
-nano pterodactyl.conf
+sudo nano pterodactyl.conf
 ```
 
 Paste the below info into the config file, make sure to change the `<domain>` section to the IP of the system or the actual domain when configuring the dedicated machine.
 
 #### NGINX With SSL
+
+<details>
+<summary>Info</summary>
+<p>
 
 ```sh
 server_tokens off;
@@ -116,7 +120,14 @@ server {
 }
 ```
 
+</p>
+</details>
+
 #### NGINX Without SSL
+
+<details>
+<summary>Info</summary>
+<p>
 
 ```sh
 server {
@@ -166,11 +177,14 @@ server {
 }
 ```
 
+</p>
+</details>
+
 #### Fix nginx config
 
 ```sh
 cd /etc/nginx/
-nano nginx.conf
+sudo nano nginx.conf
 ```
 
 comment out the below section of the config
@@ -201,12 +215,12 @@ comment out the below section of the config
 #### Restart NGINX
 
 ```sh
-systemctl restart nginx
+sudo systemctl restart nginx
 ```
 
 #### 502 Bad Gateway
 ```sh
-reboot
+sudo reboot
 ```
 
 ## Info

@@ -10,6 +10,10 @@
 mysql_secure_installation
 ```
 
+<details>
+<summary>MySQL Secure Installation Options</summary>
+<p>
+
 ```sql
 ## Change to your own secure password
 Set root password? [Y/N] Y
@@ -27,18 +31,22 @@ Remove test database and access to it? [Y/N] Y
 Reload privilege tables now? [Y/N] Y
 ```
 
+</p>
+</details>
+
 ### Creating a database for Pterodactyl Panel
+
+<details>
+<summary>Quick mysql setup</summary>
+<p>
+
+Note: This command is just for testing and should not be used for the actual install
 
 Log In
 
 ```sh
 mysql -u root -p
 ```
-
-<details>
-<summary>Quick mysql setup</summary>
-<p>
-Note: This command is just for testing and should not be used for the actual install
 
 ```sh
 USE mysql;
@@ -47,12 +55,21 @@ CREATE DATABASE panel;
 GRANT ALL PRIVILEGES ON panel.* TO 'pterodactyl'@'127.0.0.1' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 exit
-echo 'done'
 ```
 
 </p>
 </details>
 &nbsp;
+
+<details>
+<summary>Long mysql setup</summary>
+<p>
+
+Log In
+
+```sh
+mysql -u root -p
+```
 
 Set to use mysql
 
@@ -86,6 +103,10 @@ Leave MariaDB/MySQL
 ```sh
 exit
 ```
+
+</p>
+</details>
+
 ## Info
 
 [Next Step - Install](/Pterodactyl/1%20-%20Panel/3%20-%20Install.md)

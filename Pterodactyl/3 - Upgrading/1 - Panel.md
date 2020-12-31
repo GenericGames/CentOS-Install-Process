@@ -16,7 +16,9 @@ sudo php artisan down
 [Check here for the most recent version command](https://pterodactyl.io/panel/1.0/upgrade/1.0.html#fetch-updated-files)
 
 ```sh
-sudo curl -L https://github.com/pterodactyl/panel/releases/download/v1.1.3/panel.tar.gz | tar -xzv
+## Make sure to check the link above for the most recent version.
+## Change "1.1.3" to the current version without the " marks
+sudo curl -L https://github.com/pterodactyl/panel/releases/download/v"1.1.3"/panel.tar.gz | sudo tar -xzv
 sudo chmod -R 755 storage/* bootstrap/cache
 ```
 
@@ -36,7 +38,7 @@ sudo php artisan config:clear
 ### Database Updates
 
 ```sh
-php artisan migrate --seed --force
+sudo php artisan migrate --seed --force
 ```
 
 ### Set Permissions

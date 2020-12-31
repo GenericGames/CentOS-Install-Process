@@ -7,9 +7,9 @@
 ### Install Wings
 
 ```sh
-mkdir -p /etc/pterodactyl
-curl -L -o /usr/local/bin/wings https://github.com/pterodactyl/wings/releases/download/v1.1.3/wings_linux_amd64
-chmod u+x /usr/local/bin/wings
+sudo mkdir -p /etc/pterodactyl
+sudo curl -L -o /usr/local/bin/wings https://github.com/pterodactyl/wings/releases/download/v1.1.3/wings_linux_amd64
+sudo chmod u+x /usr/local/bin/wings
 ```
 
 ## Info

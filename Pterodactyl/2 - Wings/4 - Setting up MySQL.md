@@ -12,6 +12,10 @@ This only needs to be done if this server does not run the panel as well
 mysql_secure_installation
 ```
 
+<details>
+<summary>MySQL Secure Installation Options</summary>
+<p>
+
 ```sql
 ## Change to your own secure password
 Set root password? [Y/N] Y
@@ -28,6 +32,9 @@ Remove test database and access to it? [Y/N] Y
 ## Clears and sets all the changes made
 Reload privilege tables now? [Y/N] Y
 ```
+
+</p>
+</details>
 
 ### Creating a database for Pterodactyl Nodes
 
@@ -61,7 +68,7 @@ Allowing external database access
 
 ```sh
 cd /etc/
-nano my.cnf
+sudo nano my.cnf
 ```
 
 add below to file
@@ -72,7 +79,7 @@ bind-address=0.0.0.0
 ```
 
 ```sh
-systemctl restart mysql
+sudo systemctl restart mysql
 ```
 
 ### Adding database to panel

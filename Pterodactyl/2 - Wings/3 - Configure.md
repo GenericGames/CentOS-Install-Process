@@ -11,7 +11,7 @@ After creating a location go to **Nodes** and create a new node
 
 ```sh
 cd /etc/pterodactyl
-nano config.yml
+sudo nano config.yml
 ```
 
 Select the node you just created and click on **Configuration** and copy the text and paste it in **Config.yml**
@@ -19,14 +19,14 @@ Select the node you just created and click on **Configuration** and copy the tex
 ### Start Wings
 
 ```sh
-wings --debug
+sudo /usr/local/bin/wings --debug
 ```
 
 ### Daemonizing
 
 ```sh
 cd /etc/systemd/system
-nano wings.service
+sudo nano wings.service
 ```
 
 Paste the text below into wings.service
@@ -52,7 +52,7 @@ WantedBy=multi-user.target
 ### Start & Enable wings
 
 ```sh
-systemctl enable --now wings
+sudo systemctl enable --now wings
 ```
 
 ## Info

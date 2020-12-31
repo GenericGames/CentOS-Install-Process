@@ -4,33 +4,37 @@
 
 [Back to Panel](/Pterodactyl/1%20-%20Panel)
 
-### Download Files
-
 <details>
 <summary>Quick download/install</summary>
 <p>
 
 ```sh
-mkdir -p /var/www/pterodactyl && cd /var/www/pterodactyl && curl -Lo panel.tar.gz https://github.com/pterodactyl/panel/releases/download/v1.1.1/panel.tar.gz && tar -xzvf panel.tar.gz && chmod -R 755 storage/* bootstrap/cache/ && cp .env.example .env && composer install --no-dev --optimize-autoloader && php artisan key:generate --force && echo 'done'
+set -x ; sudo mkdir -p /var/www/pterodactyl && cd /var/www/pterodactyl && sudo curl -Lo panel.tar.gz https://github.com/pterodactyl/panel/releases/download/v1.1.1/panel.tar.gz && sudo tar -xzvf panel.tar.gz && sudo chmod -R 755 storage/* bootstrap/cache/ && sudo cp .env.example .env && sudo $(which composer) install --no-dev --optimize-autoloader && sudo php artisan key:generate --force ; set +x ; echo 'done'
 ```
 
 </p>
 </details>
 &nbsp;
 
+<details>
+<summary>Long download/install</summary>
+<p>
+
+### Download Files
+
 Make Dir and CD into it
 
 ```sh
-mkdir -p /var/www/pterodactyl
+sudo mkdir -p /var/www/pterodactyl
 cd /var/www/pterodactyl
 ```
 
 Download files
 
 ```sh
-curl -Lo panel.tar.gz https://github.com/pterodactyl/panel/releases/download/v1.1.1/panel.tar.gz
-tar -xzvf panel.tar.gz
-chmod -R 755 storage/* bootstrap/cache/
+sudo curl -Lo panel.tar.gz https://github.com/pterodactyl/panel/releases/download/v1.1.1/panel.tar.gz
+sudo tar -xzvf panel.tar.gz
+sudo chmod -R 755 storage/* bootstrap/cache/
 ```
 
 ### Installation
@@ -38,138 +42,135 @@ chmod -R 755 storage/* bootstrap/cache/
 Copy default default environment setting file, install core dependencies, and general all application encryption key
 
 ```sh
-cp .env.example .env
-composer install --no-dev --optimize-autoloader
+sudo cp .env.example .env
+sudo $(which composer) install --no-dev --optimize-autoloader
 ```
 
 Only run the command below if you are installing this Panel for the first time and do not have any Pterodactyl Panel data in the database
 
 ```sh
-php artisan key:generate --force
+sudo php artisan key:generate --force
 ```
+
+</p>
+</details>
 
 #### Environment Configuration
 
 ##### Setup
 
 ```sh
-php artisan p:environment:setup
-## Note Everything in Brackets [] is default setting, press enter if you want default
+sudo php artisan p:environment:setup
 ```
+
+<details>
+<summary>Options</summary>
+<p>
+Note Everything in Brackets [] is default setting, press enter if you want default
+
 
 ```sh
 Egg Author Email [unknown@unknown.com]
 ## For now use default (hit enter) when setting up on dedicated server type in your email
-```
 
-```sh
 Application url [http://localhost]
 ## For now use default (hit enter) when setting up on dedicated server use https://simplegaming.gg/
-```
 
-```sh
 Application timezone [America/New_York]:
 ## America/Phoenix
-```
 
-```sh
 Cache Driver [Filesystem]:
 ## Redis
-```
 
-```sh
 Session Driver [MySQL Database]:
 ## Redis
-```
 
-```sh
 Queue Driver [MySQL Database]:
 ## Redis
-```
 
-```sh
 Enable UI based settings editor (yes/no) [yes]:
 ## Default (hit enter)
-```
 
-```sh
 Redis Host [localhost]:
 ## Default (hit enter)
-```
 
-```sh
 Redis Password:
 ## Default (hit enter)
-```
 
-```sh
 Redis Port [6379]:
 ## Default (hit enter)
 ```
 
+</p>
+</details>
+
 ##### Database
 
 ```sh
-php artisan p:environment:database
-## Note Everything in Brackets [] is default setting, press enter if you want default
+sudo php artisan p:environment:database
 ```
+
+<details>
+<summary>Options</summary>
+<p>
+
+Note Everything in Brackets [] is default setting, press enter if you want default
+
 
 ```sh
 Database Host [127.0.0.1]:
 ## Default (hit enter)
-```
 
-```sh
 Database Port [3306]:
 Default (hit enter)
-```
 
-```sh
 Database Name [panel]:
 ## default (hit enter) unless panel name was changed earlier in the configuration
-```
 
-```sh
 Database Username [pterodactyl]:
 ## Default (hit enter) unless database username was changed earlier in the configuration
-```
 
-```sh
 Database Password:
 ## Default is set to "somePassword" for testing purposes but should have been changed for actual install
 ```
 
+</p>
+</details>
+
 ##### Mail
 
 ```sh
-php artisan p:environment:mail
-## Note Everything in Brackets [] is default setting, press enter if you want default
+sudo php artisan p:environment:mail
 ```
+
+<details>
+<summary>Options</summary>
+<p>
+
+Note Everything in Brackets [] is default setting, press enter if you want default
+
 
 ```sh
 Which driver should be used for sending emails [SMTP Server]:
-Mail
-```
+## Mail
 
-```sh
 Email address emails should originate from [no-reply@example.com]
 ## For now use default (hit enter)
-```
 
-```sh
 Name that emails should appear from [Pterodactyl Panel]:
 ## Default (hit enter)
+
+Encryption method to use [TLS]:
+## None
 ```
 
-```sh
-Encryption method to use [TLS]:
-None
-```
+</p>
+</details>
 
 #### Database Setup
 
 ```sh
-php artisan migrate --seed --force
+sudo php artisan migrate --seed --force
 ```
 
 ##### Database User Setup
@@ -177,8 +178,12 @@ php artisan migrate --seed --force
 Add the first user
 
 ```sh
-php artisan p:user:make
+sudo php artisan p:user:make
 ```
+
+<details>
+<summary>Options</summary>
+<p>
 
 ```sh
 Is this user an administrator (yes/no) [no]:
@@ -210,10 +215,13 @@ Password:
 ## For testing we will use "Password1" when dedicated is set up we will use actual password. Enter password - Note: Must be at a minimum 8 characters, contain one capital, and one number
 ```
 
+</p>
+</details>
+
 #### Set Permissions
 
 ```sh
-chown -R nginx:nginx *
+sudo chown -R nginx:nginx *
 ```
 
 ### Queue Listeners
@@ -230,7 +238,7 @@ sudo crontab -e
 
 ```sh
 cd /etc/systemd/system
-nano pteroq.service
+sudo nano pteroq.service
 ```
 
 ```conf
@@ -254,7 +262,7 @@ WantedBy=multi-user.target
 ```
 
 ```sh
-systemctl enable --now redis
+sudo systemctl enable --now redis
 sudo systemctl enable --now pteroq.service
 ```
 

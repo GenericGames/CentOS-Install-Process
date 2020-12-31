@@ -4,31 +4,34 @@
 
 [Back to Wings](/Pterodactyl/2%20-%20Wings)
 
-### Before install
+<details>
+<summary>Quick Install Dependencies</summary>
+<p>
 
 ```sh
-sudo nano /root/.bashrc
+Text
 ```
 
-Add the lines below to the bottom of the file
+</p>
+</details>
+&nbsp;
 
-```conf
-export PATH="$PATH:/usr/local/bin"
-export EDITOR=nano
-```
+<details>
+<summary>Long Install Dependencies</summary>
+<p>
 
 ### Docker
 
 ```sh
-dnf install -y dnf-utils device-mapper-persistent-data lvm2
+sudo dnf install -y dnf-utils device-mapper-persistent-data lvm2
 
-dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+sudo dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
 
 sudo dnf install -y https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.10-3.2.el7.x86_64.rpm
 
 dnf install -y docker-ce --nobest
 
-systemctl enable --now docker
+sudo systemctl enable --now docker
 ```
 
 ### MariaDB
@@ -36,7 +39,7 @@ systemctl enable --now docker
 You only need to install MariaDB if the panel is not on the same machine
 
 ```sh
-dnf install -y mariadb mariadb-server
+sudo dnf install -y mariadb mariadb-server
 
 systemctl enable --now mariadb
 ```
@@ -44,13 +47,16 @@ systemctl enable --now mariadb
 ### FirewallD changes
 
 ```sh
-firewall-cmd --add-port 8080/tcp --permanent
-firewall-cmd --add-port 2022/tcp --permanent
-firewall-cmd --add-port 3306/tcp --permanent
-firewall-cmd --permanent --zone=trusted --change-interface=pterodactyl0
-firewall-cmd --zone=trusted --add-masquerade --permanent
-firewall-cmd --reload
+sudo firewall-cmd --add-port 8080/tcp --permanent
+sudo firewall-cmd --add-port 2022/tcp --permanent
+sudo firewall-cmd --add-port 3306/tcp --permanent
+sudo firewall-cmd --permanent --zone=trusted --change-interface=pterodactyl0
+sudo firewall-cmd --zone=trusted --add-masquerade --permanent
+sudo firewall-cmd --reload
 ```
+
+</p>
+</details>
 
 ## Info
 
