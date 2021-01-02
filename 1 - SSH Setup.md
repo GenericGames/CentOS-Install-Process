@@ -27,7 +27,7 @@ sudo dnf install openssh-server
 Verify that SSH service is running
 
 ```sh
-sudo systemctl status sshd
+systemctl status sshd
 ```
 
 If not running
@@ -39,7 +39,7 @@ sudo systemctl enable --now sshd
 Configure firewall and open port 22
 
 ```sh
-firewall-cmd --add-service ssh
+sudo firewall-cmd --add-service ssh
 ```
 
 To get IP
@@ -58,7 +58,7 @@ Create shortcut for ssh login on local machine
 
 ```sh
 cd ~/.ssh
-nano config
+vim config
 
 ## add below to file
 
@@ -89,7 +89,7 @@ ssh "hostname"
 disable login with password
 
 ```sh
-sudo nano /etc/ssh/sshd_config
+sudo vim /etc/ssh/sshd_config
 
 ## change from
 
