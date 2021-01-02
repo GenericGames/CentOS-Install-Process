@@ -68,7 +68,7 @@ Allowing external database access
 
 ```sh
 cd /etc/
-sudo nano my.cnf
+sudo vim my.cnf
 ```
 
 add below to file

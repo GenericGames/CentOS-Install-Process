@@ -238,7 +238,7 @@ sudo crontab -e
 
 ```sh
 cd /etc/systemd/system
-sudo nano pteroq.service
+sudo vim pteroq.service
 ```
 
 ```conf

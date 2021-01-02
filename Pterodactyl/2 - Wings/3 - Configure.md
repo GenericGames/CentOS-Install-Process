@@ -11,7 +11,7 @@ After creating a location go to **Nodes** and create a new node
 
 ```sh
 cd /etc/pterodactyl
-sudo nano config.yml
+sudo vim config.yml
 ```
 
 Select the node you just created and click on **Configuration** and copy the text and paste it in **Config.yml**
@@ -26,7 +26,7 @@ sudo /usr/local/bin/wings --debug
 
 ```sh
 cd /etc/systemd/system
-sudo nano wings.service
+sudo vim wings.service
 ```
 
 Paste the text below into wings.service

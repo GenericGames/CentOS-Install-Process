@@ -8,7 +8,7 @@
 
 ```sh
 cd /etc/php-fpm.d
-sudo nano www-pterodactyl.conf
+sudo vim www-pterodactyl.conf
 ```
 
 Paste the info below into that file
@@ -40,7 +40,7 @@ sudo systemctl enable --now php-fpm
 
 ```sh
 cd /etc/nginx/conf.d/
-sudo nano pterodactyl.conf
+sudo vim pterodactyl.conf
 ```
 
 Paste the below info into the config file, make sure to change the `<domain>` section to the IP of the system or the actual domain when configuring the dedicated machine.
@@ -184,7 +184,7 @@ server {
 
 ```sh
 cd /etc/nginx/
-sudo nano nginx.conf
+sudo vim nginx.conf
 ```
 
 comment out the below section of the config
